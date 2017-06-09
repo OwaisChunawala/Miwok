@@ -31,12 +31,11 @@ public class NumbersActivity extends AppCompatActivity {
         LinearLayout rootView =(LinearLayout) findViewById(R.id.rootView);
 
         int index = 0;
-        TextView [] wordView = new TextView[10];
 
         while (index< 10){
-            wordView[index] = new TextView(this);
-            wordView[index].setText(words.get(index));
-            rootView.addView(wordView[index]);
+            TextView wordView = new TextView(this);
+            wordView.setText(words.get(index));
+            rootView.addView(wordView);
             index++;
         }
 
