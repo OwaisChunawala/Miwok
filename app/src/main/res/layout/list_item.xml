@@ -18,7 +18,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingLeft="16dp"
-        android:paddingTop="5dp">
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp">
 
         <TextView
             android:id="@+id/miwok_text_view"

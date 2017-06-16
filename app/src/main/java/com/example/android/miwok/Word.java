@@ -9,7 +9,9 @@ import android.widget.ImageView;
 public class Word {
     private String mDefaultTranslation;
     private String mMiwokTranslation;
-    private int mImageResourceID;
+    private int mImageResourceID = NO_IMAGE_PROVIDED;
+
+    private static final int NO_IMAGE_PROVIDED = -1;
 
     public Word(String defaultTranslation, String miwokTranslation){
         mDefaultTranslation = defaultTranslation;
@@ -32,5 +34,9 @@ public class Word {
 
     public int getImageResourceID() {
         return mImageResourceID;
+    }
+
+    public boolean hasImage(){
+        return mImageResourceID != NO_IMAGE_PROVIDED;
     }
 }
