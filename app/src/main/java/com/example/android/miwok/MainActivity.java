@@ -23,10 +23,11 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the numbers View is clicked on.
             @Override
             public void onClick(View view) {
-                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
-                startActivity(numbersIntent);
+                Intent numberIntent = new Intent(MainActivity.this, NumbersActivity.class);
+                startActivity(numberIntent);
             }
         });
+
 
         // Find the View that shows the numbers category
         TextView colors = (TextView) findViewById(R.id.colors);
@@ -68,26 +69,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-//    public void openColorsActivity(View view){
-//        Intent intentColors = new Intent(this, ColorsActivity.class);
-//        startActivity(intentColors);
-//    }
-//    public void openFamilyActivity(View view){
-//        Intent intentFamily = new Intent(this, FamilyActivity.class);
-//        if (intentFamily.resolveActivity(getPackageManager()) != null) {
-//            startActivity(intentFamily);
-//        }
-//    }
-//    public void openNumbersActivity(View view){
-//        Intent intentNumbers = new Intent(this, NumbersActivity.class);
-//        if (intentNumbers.resolveActivity(getPackageManager()) != null) {
-//            startActivity(intentNumbers);
-//        }
-//    }
-//    public void openPhrasesActivity(View view){
-//        Intent intentPhrases = new Intent(this, PhrasesActivity.class);
-//        if (intentPhrases.resolveActivity(getPackageManager()) != null) {
-//            startActivity(intentPhrases);
-//        }
-//    }
 }
