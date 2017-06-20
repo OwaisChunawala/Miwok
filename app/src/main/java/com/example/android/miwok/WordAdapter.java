@@ -77,6 +77,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         //Set the background color of the textcontainer view
         textContainr.setBackgroundColor(color);
 
+
         View wholeView = listItemView.findViewById(R.id.wholeView);
         final MediaPlayer mediaPlayer = MediaPlayer.create(getContext(), currentWord.getAudioResourceID());
         //Setting media player with the text
@@ -85,8 +86,18 @@ public class WordAdapter extends ArrayAdapter<Word> {
             @Override
             public void onClick(View view) {
                 mediaPlayer.start();
+                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mediaPlayer.release();
+                        Toast toast = Toast.makeText(getContext(), "Released", Toast.LENGTH_SHORT);
+                        toast.show();
+                        mediaPlayer = null;
+                    }
+                });
             }
         });
+
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView
