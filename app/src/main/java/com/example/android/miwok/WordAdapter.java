@@ -89,10 +89,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
                 mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mediaPlayer) {
-                        mediaPlayer.release();
-                        Toast toast = Toast.makeText(getContext(), "Released", Toast.LENGTH_SHORT);
-                        toast.show();
-                        mediaPlayer = null;
+//                        mediaPlayer.release();
+//                        mediaPlayer = null;
                     }
                 });
             }
