@@ -78,23 +78,17 @@ public class WordAdapter extends ArrayAdapter<Word> {
         textContainr.setBackgroundColor(color);
 
 
-        View wholeView = listItemView.findViewById(R.id.wholeView);
-        final MediaPlayer mediaPlayer = MediaPlayer.create(getContext(), currentWord.getAudioResourceID());
-        //Setting media player with the text
-        wholeView.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the play View is clicked on.
-            @Override
-            public void onClick(View view) {
-                mediaPlayer.start();
-                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mediaPlayer) {
-//                        mediaPlayer.release();
-//                        mediaPlayer = null;
-                    }
-                });
-            }
-        });
+//        View wholeView = listItemView.findViewById(R.id.wholeView);
+//        final MediaPlayer mediaPlayer = MediaPlayer.create(getContext(), currentWord.getmAudioResourceID());
+//        //Setting media player with the text
+//        wholeView.setOnClickListener(new View.OnClickListener() {
+//            // The code in this method will be executed when the play View is clicked on.
+//            @Override
+//            public void onClick(View view) {
+//                mediaPlayer.start();
+//
+//            }
+//        });
 
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
