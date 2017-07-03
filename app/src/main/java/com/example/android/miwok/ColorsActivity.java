@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.media.AudioManager;
@@ -68,6 +69,10 @@ public class ColorsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
+
+
+        //displays UP activity button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Create and setup the {@link AudioManager} to request audio focus
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
